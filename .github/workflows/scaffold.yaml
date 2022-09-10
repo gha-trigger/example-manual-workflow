@@ -62,7 +62,7 @@ jobs:
           gh pr create -R "$MAIN_REPO" \\
             -H "${{steps.branch.outputs.branch}}" \\
             -t "Scaffold a service (${SERVICE})" \\
-            -b "This pull request was created by [GitHub Actions](https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)"
+            -b "This pull request was created by [GitHub Actions]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)"
           $CODE_BLOCK
           EOS
         env:
