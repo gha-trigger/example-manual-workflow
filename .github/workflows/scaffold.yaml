@@ -41,7 +41,7 @@ jobs:
         working-directory: ${{env.SERVICE}}
 
       - run: |
-          echo "::set-output name=branch::scaffold-${SERVICE}-$(date +%Y%m%dT%H%M%S)"
+          echo "branch=scaffold-${SERVICE}-$(date +%Y%m%dT%H%M%S)" >> "$GITHUB_OUTPUT"
         id: branch
 
       - run: |
